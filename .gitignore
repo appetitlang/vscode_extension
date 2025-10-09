@@ -1,0 +1,6 @@
+# Any builds made during testing.
+dist/
+
+.DS_Store
+
+src/.vscode*
