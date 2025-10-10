@@ -1,44 +1,36 @@
-# appetit README
+## Appetit Visual Studio Code Extension
+This is a simple extension for Visual Studio Code that adds some basic syntax highlighting and snippet support to the editor.
 
-This is a basic extension for Appetit for Visual Studio Code. NOTE: given my unfamilarity with the VS Code API and my rusty knowledge of JS, this is likely the least stable and consistent part of the Appetit projects. 
-
-Features:
+### Features
+The following is available in the extension.
 * Syntax highlighting support.
 * Snippet support for each implemented statement, often accessible via the first two letters of each statement.
 * Actions for Command Palette:
     * Commenting for selected text (Appetit: Comment Line(s))
     * Remove commenting for selected text (Appetit: Uncomment Line(s))
 
-### Snippets
-`_` indicates a blank spot.
-| Snippet Command | Output |
-|----|----|
-| ask | ask "" to "" |
-| co | - _ |
-| cd | copydirectory "" to "" |
-| cp | copyfile "" to "" |
-| dd | deletedirectory "" |
-| df | deletefile "" |
-| dl | download "" to "" |
-| ex | execute "" |
-| mkd | makedirectory "" |
-| mkf | makefile "" |
-| mi | minver _ |
-| mvd | movedirectory "" to "" |
-| mvf | movefile "" to "" |
-| pa | pause _ |
-| se | set _ = "" |
-| wr | write "" |
-| wrl | writeln "" |
-| zd | zipdirectory "" to "" |
-| zf | zipfile "" to "" |
+### Packaging
 
-Special thanks to:
-- the official Batch File TextMate grammar for number support [here](https://github.com/microsoft/vscode/blob/main/extensions/bat/syntaxes/batchfile.tmLanguage.json).
-- Olaf Neumann's Regex Generator [here](https://regex-generator.olafneumann.org/)
+#### Making the Extension
+If vsce isn't installed, get it first:
 
-## Release Notes
+    npm install -g @vscode/vsce
 
-### 1.0.0
+Run the following:
 
-Initial release of the extension. This is still in development so do not consider this stable yet.
+    mkdir -p dist/
+	cd src/
+    vsce package --allow-missing-repository
+	mv appetit*.vsix ../dist/
+
+There's also a Makefile available. Simply run `make` to clean up any lingering artefacts (like an old build) and package a fresh version which is output to `dist/`.
+
+#### Installing the Extension
+In Visual Studio Code:
+
+1. Open the Command Palette
+2. Select "Extensions: Install from VSIX..."
+3. Select the VSIX file in dist/
+4. Profit
+
+
