@@ -3,6 +3,9 @@
 	"name": "Appetit",
 	"patterns": [
 		{
+			"include": "#numbers"
+		},
+		{
 			"include": "#comments"
 		},
 		{
@@ -12,9 +15,6 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#numbers"
-		},
-		{
 			"include": "#strings"
 		},
 		{
@@ -22,6 +22,14 @@
 		}
 	],
 	"repository": {
+		"numbers": {
+			"patterns": [
+				{
+					"match": "-?\\d+",
+					"name": "constant.numeric.appetit"
+				}
+			]
+		},
 		"comments": {
 			"name": "comment.line.appetit",
 			"begin": "-[^>]",
@@ -40,14 +48,6 @@
 				{
 					"name": "keyword.control.appetit",
 					"match": "\\b(ask|copydirectory|copyfile|download|deletedirectory|deletefile|execute|minver|makefile|makedirectory|movedirectory|movefile|pause|set|write|writeln|zipdirectory|zipfile)\\b"
-				}
-			]
-		},
-		"numbers": {
-			"patterns": [
-				{
-					"match": "[0-9]+",
-					"name": "constant.numeric.appetit"
 				}
 			]
 		},
