@@ -47,7 +47,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.appetit",
-					"match": "\\b(ask|copydirectory|copyfile|download|deletedirectory|deletefile|execute|minver|makefile|makedirectory|movedirectory|movefile|pause|set|write|writeln|zipdirectory|zipfile)\\b"
+					"match": "\\b(ask|copydirectory|copyfile|download|deletedirectory|deletefile|execute|exit|minver|makefile|makedirectory|movedirectory|movefile|pause|set|write|writeln|zipdirectory|zipfile)\\b"
 				}
 			]
 		},
