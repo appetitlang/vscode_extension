@@ -69,6 +69,11 @@
         "body": ["pause $0"],
         "description": "Move a file from one place to another"
     },
+    "Run": {
+        "prefix": "run",
+        "body": ["run \"$0\""],
+        "description": "Run an external script"
+    },
     "Set": {
         "prefix": "se",
         "body": ["set $1 = \"$0\""],
