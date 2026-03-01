@@ -39,6 +39,11 @@
         "body": ["execute \"$0\""],
         "description": "Execute a system command"
     },
+    "Log": {
+        "prefix": "log",
+        "body": ["log \"$1\" to \"$0\""],
+        "description": "Log out a string to keep a record of script execution"
+    },
     "Make Directory": {
         "prefix": "mkd",
         "body": ["makedirectory \"$0\""],
