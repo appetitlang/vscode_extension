@@ -1,7 +1,7 @@
 {
     "Ask": {
         "prefix": "ask",
-        "body": ["ask \"$1\" to \"$0\""],
+        "body": ["ask \"$1\" to $0"],
         "description": "Ask the user a question and store the result in a variable"
     },
     "Comment": {
